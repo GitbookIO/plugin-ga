@@ -9,10 +9,10 @@
     "homepage": "https://github.com/GitbookIO/plugin-ga",
     "repository": {
         "type": "git",
-        "url": "https://github.com/GitbookIO/plugin-mixpanel.git"
+        "url": "https://github.com/GitbookIO/plugin-ga.git"
     },
     "license": "Apache 2",
     "bugs": {
-        "url": "https://github.com/GitbookIO/plugin-mixpanel/issues"
+        "url": "https://github.com/GitbookIO/plugin-ga/issues"
     }
 }
