@@ -13,14 +13,14 @@ And use it for your book with:
 $ gitbook build ./ --plugins=ga
 ```
 
-
-You can set the Google Analytics token using the plugins configuration (command line option: `--pluginsConfig`) with the following content:
+You can set the Disqus shortname using the plugins configuration in the book.json:
 
 ```
 {
-    "ga": {
-        "token": "UA-XXXX-Y"
+    pluginsConfig: {
+        "ga": {
+            "token": "UA-XXXX-Y"
+        }
     }
 }
 ```
-
