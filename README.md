@@ -17,6 +17,7 @@ You can set the Disqus shortname using the plugins configuration in the book.jso
 
 ```
 {
+    plugins: ["ga"],
     pluginsConfig: {
         "ga": {
             "token": "UA-XXXX-Y"
