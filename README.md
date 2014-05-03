@@ -13,7 +13,7 @@ And use it for your book with:
 $ gitbook build ./ --plugins=ga
 ```
 
-You can set the Disqus shortname using the plugins configuration in the book.json:
+You can set the Google Analytics tracking ID using the plugins configuration in the book.json:
 
 ```
 {
