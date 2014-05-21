@@ -11,7 +11,7 @@ And use it for your book with in the book.json:
 
 ```
 {
-    plugins: ["ga"]
+    "plugins": ["ga"]
 }
 ```
 
@@ -19,8 +19,8 @@ You can set the Google Analytics tracking ID using the plugins configuration in 
 
 ```
 {
-    plugins: ["ga"],
-    pluginsConfig: {
+    "plugins": ["ga"],
+    "pluginsConfig": {
         "ga": {
             "token": "UA-XXXX-Y"
         }
