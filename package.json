@@ -2,7 +2,7 @@
     "name": "gitbook-plugin-ga",
     "description": "Google Analytics tracking for your gitbook",
     "main": "index.js",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "engines": {
         "gitbook": ">=0.4.6"
     },
