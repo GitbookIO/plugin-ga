@@ -4,15 +4,29 @@
     "main": "index.js",
     "version": "0.2.1",
     "engines": {
-        "gitbook": ">=0.4.6"
+        "gitbook": ">=2.5.1"
     },
     "homepage": "https://github.com/GitbookIO/plugin-ga",
     "repository": {
         "type": "git",
         "url": "https://github.com/GitbookIO/plugin-ga.git"
     },
-    "license": "Apache 2",
+    "license": "Apache-2.0",
     "bugs": {
         "url": "https://github.com/GitbookIO/plugin-ga/issues"
+    },
+    "gitbook": {
+        "properties": {
+            "token": {
+                "type": "string",
+                "title": "Google Analytics Token",
+                "required": true
+            },
+            "configuration": {
+                "type": [ "string", "object" ],
+                "title": "Configuration mode",
+                "default": "auto"
+            }
+        }
     }
 }
