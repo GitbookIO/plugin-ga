@@ -7,10 +7,9 @@ require(["gitbook"], function(gitbook) {
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
         ga('create', config.token, config.configuration);
-    });
-
-    // Notify pageview
-    gitbook.events.bind("page.change", function() {
-        ga('send', 'pageview', window.location.pathname+window.location.search);
+        // Notify pageview
+        gitbook.events.bind("page.change", function() {
+            ga('send', 'pageview', window.location.pathname+window.location.search);
+        });
     });
 });
