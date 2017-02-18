@@ -3,6 +3,7 @@
     "title": "Google Analytics",
     "description": "Track page views of your book into Google Analytics",
     "main": "index.js",
+    "icon": "./icon.png",
     "browser": "./_assets/plugin.js",
     "version": "1.0.1",
     "engines": {
