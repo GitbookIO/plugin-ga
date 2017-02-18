@@ -7,7 +7,7 @@ const { React } = GitBook;
  */
 let GAWrapper = React.createClass({
     propTypes: {
-        children: React.PropTypes.node.isRequired,
+        children: React.PropTypes.node,
         config:   GitBook.PropTypes.map.isRequired,
         location: GitBook.PropTypes.Location.isRequired
     },
@@ -22,28 +22,32 @@ let GAWrapper = React.createClass({
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
         // Initialize ga
-        ga('create', cfg.get('token'), cfg.get('configuration'));
+        ga('create', config.get('token'), config.get('configuration'));
     },
 
     componentDidUpdate(prevProps) {
-        const hasChanged = prevProps.location != this.props.location;
+        const { location: prevLocation } = prevProps;
+        const { location } = this.props;
+
+        // We do not track hash change
+        const hasChanged = !prevLocation.delete('hash').equals(location.delete('hash'));
 
         if (hasChanged) {
-            ga('send', 'pageview', window.location.pathname + window.location.search);
+            ga('send', 'pageview', location.toString());
         }
     },
 
     render() {
         const { children } = this.props;
-        return React.Children.only(children);
+        return children ? React.Children.only(children) : null;
     }
 });
 GAWrapper = GitBook.connect(
+    GAWrapper,
     ({ history, config }) => ({
         location: history.location,
         config: config.getForPlugin('ga')
-    }),
-    GAWrapper
+    })
 );
 
 module.exports = GitBook.createPlugin({
