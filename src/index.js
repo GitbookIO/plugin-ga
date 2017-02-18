@@ -49,9 +49,5 @@ GAWrapper = GitBook.connect(
 module.exports = GitBook.createPlugin({
     activate: (dispatch, getState, { Components }) => {
         dispatch(Components.registerComponent(GAWrapper, { role: 'website:body' }));
-    },
-    reduce: reducers,
-    actions: {
-        Search
     }
 });

@@ -13,8 +13,7 @@
         "gitbook-plugin": "^4.0.0-alpha.4"
     },
     "scripts": {
-      "build-js": "gitbook-plugin build ./src/index.js ./_assets/plugin.js",
-      "prepublish": "npm run build-js"
+      "prepublish": "gitbook-plugin build ./src/index.js ./_assets/plugin.js"
     },
     "homepage": "https://github.com/GitbookIO/plugin-ga",
     "repository": {
